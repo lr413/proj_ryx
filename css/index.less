@@ -1,0 +1,827 @@
+@import 'mixins/clear.less';
+
+//最外层的包裹元素
+#wrapper {
+
+    //头部开始
+    #header {
+
+        //头部上半部
+        .headTop {
+            background: #eaeaea;
+            height: 30px;
+
+            //头部上半部版心
+            .headTopMain {
+                width: 1200px;
+                height: 30px;
+                line-height: 30px;
+                margin: 0 auto;
+
+                .left {
+                    float: left;
+
+                    h5 {
+                        float: left;
+                    }
+
+                    p {
+                        float: left;
+
+                        a {
+                            &:first-child {
+                                margin-left: 5px;
+                                border-right: 1px solid #b3aeae;
+                                padding-right: 5px;
+                            }
+
+                        }
+                    }
+                }
+
+                .right {
+                    float: right;
+
+                    nav {
+                        font-size: 0px;
+
+                        a {
+                            font-size: 12px;
+                            margin-right: 10px;
+                            padding-right: 10px;
+                            border-right: 1px solid #b3aeae;
+
+                            &:last-child {
+                                margin-right: 0px;
+                                padding-right: 0px;
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //头部下半部
+        .headBottom {
+
+            //头部下半部版心
+            .headBottomMain {
+                width: 1200px;
+                margin: 0 auto;
+                .clearfix();
+
+                //logo
+                .logo {
+                    float: left;
+
+                    img {
+                        width: 175px;
+                        height: 56px;
+                        margin: 25px 45px;
+                    }
+                }
+
+                //搜索框
+                .search {
+                    float: right;
+                    margin-top: 35px;
+
+                    input {
+                        float: left;
+                        box-sizing: border-box;
+                        width: 490px;
+                        height: 32px;
+                        padding: 0px 4px;
+                        border: 3px solid #ea4a36;
+                        color: blue; //设置输入文本的样式
+
+                        &:last-child {
+                            width: 68px;
+                            height: 32px;
+                            background: #ea4a36;
+                            color: #fff;
+                            border: none;
+                        }
+
+                        //设置提示文本的样式
+                        &::-webkit-input-placeholder {
+                            color: yellowgreen;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    //头部结束
+
+    //分类导航开始
+    #navWrap {
+        border-bottom: 2px solid #e1251b;
+
+        //版心元素
+        .navWrapMain {
+            width: 1200px;
+            margin: 0 auto;
+            .clearfix();
+
+            a {
+                margin: 0 22px;
+                font-size: 16px;
+                color: #333;
+                float: left;
+                line-height: 50px;
+
+                &:first-child {
+                    width: 210px;
+                    height: 50px;
+                    background: #e1251b;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    float: left;
+                    text-align: center;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    //分类导航结束
+
+    //内容区域开始
+    #content {
+
+        //版心元素
+        .contentMain {
+            width: 1200px;
+            margin: 15px auto 0 auto;
+
+            //路径导航开始
+            #navPath {
+                padding: 9px 15px 9px 0;
+                font-size: 0px;
+
+                a {
+                    font-size: 12px;
+                }
+
+                i {
+                    padding: 0 5px;
+                    font-size: 12px;
+                }
+            }
+
+            //路径导航结束
+
+            //中间区域开始
+            #center {
+                margin: 5px 0 15px;
+                .clearfix();
+                //左侧放大镜开始
+                #left {
+                    width: 400px;
+                    float: left;
+
+                    //上边
+                    #leftTop {
+                        width: 400px;
+                        position: relative;
+
+                        //小图框
+                        #smallPic {
+                            width: 400px;
+                            height: 400px;
+                            border: 1px solid #dfdfdf;
+                            position: relative;
+
+                            img {}
+
+                            //蒙版元素
+                            .mask {
+                                width: 200px;
+                                height: 200px;
+                                background: rgba(255, 255, 255, .5);
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left: 0px;
+                                top: 0px;
+                            }
+                        }
+
+                        //大图框
+                        #bigPic {
+                            width: 400px;
+                            height: 400px;
+                            border: 1px solid #ddd;
+                            left: 420px;
+                            top: 0px;
+                            position: absolute;
+                            overflow: hidden;
+
+                            //大图片
+                            img {
+                                width: 800px;
+                                height: 800px;
+                                position: absolute;
+                                left: 0px;
+                                top: 0px;
+                            }
+                        }
+                    }
+
+                    //下边
+                    #leftBottom {
+                        width: 400px;
+                        margin-top: 5px;
+
+                        a {
+                            width: 10px;
+                            height: 54px;
+                            border: 1px solid #ccc;
+                            background: #ebebeb;
+                            text-align: center;
+                            line-height: 54px;
+                            float: left;
+
+                            &:first-child {
+                                margin-right: 4px;
+                            }
+                        }
+
+                        #piclist {
+                            width: 372px;
+                            height: 56px;
+                            float: left;
+                            overflow: hidden;
+
+                            ul {
+                                white-space: nowrap;
+                                font-size: 0px;
+
+                                li {
+                                    width: 50px;
+                                    height: 50px;
+                                    border: 1px solid #ccc;
+                                    padding: 2px;
+                                    margin-right: 20px;
+                                    display: inline-block;
+
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //左侧放大镜结束
+
+                //右侧商品详情开始
+                #right {
+                    float: right;
+                    width: 700px;
+                    //上面
+                    .rightTop {
+                        h3 {
+                            font-size: 14px;
+                            line-height: 21px;
+                            margin-top: 15px;
+                        }
+
+                        >p {
+                            color: #e12228;
+                            margin-top: 15px;
+                        }
+
+                        .priceWrap {
+                            margin-top: 10px;
+                            line-height: 28px;
+                            background: #fee9ec;
+                            padding: 7px;
+
+                            .priceTop {
+                                .clearfix();
+
+                                >span {
+                                    float: left;
+                                    margin-right: 15px;
+                                }
+
+                                .price {
+                                    float: left;
+                                    color: #cc1122;
+
+                                    >span {
+                                        float: left;
+                                        font-size: 16px;
+                                    }
+
+                                    p {
+                                        float: left;
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                    }
+
+                                    i {
+                                        float: left;
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                >p {
+                                    float: right;
+                                }
+                            }
+
+                            .priceBottom {
+                                .clearfix();
+
+                                >span {
+                                    float: left;
+                                    margin-right: 15px;
+                                }
+
+                                p {
+                                    float: left;
+                                    width: 520px;
+                                    line-height: 28px;
+
+                                    span {
+                                        color: #999;
+
+                                        &:first-child {
+                                            background: #c81623;
+                                            color: #fff;
+                                            padding: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .support {
+                            margin-top: 10px;
+                            line-height: 28px;
+                            .clearfix();
+
+                            >span {
+                                float: left;
+                                margin-right: 15px;
+                            }
+
+                            >p {
+                                float: left;
+                                width: 520px;
+                                color: #999;
+                            }
+                        }
+
+                        .address {
+                            margin-top: 10px;
+                            line-height: 28px;
+                            border-bottom: 1px solid #ededed;
+                            padding-bottom: 5px;
+                            .clearfix();
+
+                            >span {
+                                float: left;
+                                margin-right: 15px;
+                            }
+
+                            >p {
+                                float: left;
+                                width: 520px;
+                                color: #999;
+                            }
+                        }
+                    }
+
+                    //下面
+                    .rightBottom{
+                        margin-top: 10px;
+                        line-height: 28px;
+
+                        //选择之后结果的区域开始
+                        .choose{
+                            .clearfix();
+                            .mark{
+                                height: 30px;
+                                background: snow;
+                                border:1px solid #ddd;
+                                padding:0 20px;
+                                margin-right: 20px;
+                                text-align: center;
+                                line-height: 30px;
+                                float: left;
+                                a{
+                                    color:red;
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+                        //选择之后结果的区域结束
+
+                        //商品参数的选择区域开始
+                        .chooseWrap{
+                            
+                            dl{
+                                margin-top: 13px;
+                                margin-bottom: 13px;
+                                .clearfix();
+                                dt{
+                                    margin-right: 15px;
+                                    float: left;
+                                }
+                                dd{
+                                    float: left;
+                                    margin-right: 5px;
+                                    color:#666;
+                                    line-height: 24px;
+                                    padding:2px 14px;
+                                    border-top: 1px solid #eee;
+                                    border-left: 1px solid #eee;
+                                    border-right: 1px solid #bbb;
+                                    border-bottom: 1px solid #bbb;
+
+                                    &:first-of-type{
+                                        color:red;
+                                    }
+                                }
+                            }
+                        }
+
+                        //添加购物车区域开始
+                        .addCart{
+                            .clearfix();
+                            .count{
+                                width: 55px;
+                                margin-right: 15px;
+                                position: relative;
+                                float: left;
+                                input{
+                                    width: 38px;
+                                    height: 37px;
+                                    border:1px solid #ddd;
+                                    color:#555;
+                                }
+                                a{
+                                    width: 15px;
+                                    height: 18px;
+                                    color:#666;
+                                    background: #f1f1f1;
+                                    position: absolute;
+                                    right:1px;
+                                    text-align: center;
+                                    line-height: 18px;
+                                    border:1px solid #ddd;
+                                    &:first-child{
+                                        top:0px;
+                                    }
+
+                                    &:last-child{
+                                        top:20px;
+                                        border-top: none;
+                                    }
+                                }
+                            }
+                            button{
+                                padding-left: 25px;
+                                padding-right: 25px;
+                                height: 36px;
+                                font-size: 16px;
+                                background: #e1251b;
+                                color:#fff;
+                                border:none;
+                                float: left;
+                            }
+                        }
+
+                        //添加购物车区域结束
+                    }
+
+                }
+
+                //右侧商品详情结束
+            }
+
+            //商品详情中间部分开始
+            .goodsDetailWrap{
+                width: 1200px;
+                margin: 30px auto 0;
+                .clearfix();
+                //左边的侧边栏
+                .leftAside{
+                    width: 210px;
+                    border:1px solid #ccc;
+                    .clearfix();
+                    float: left;
+                    //上边
+                    .asideTop{
+                        .clearfix();
+                        h4{
+                            width: 105px;
+                            height: 40px;
+                            background: #fff;
+                            float: left;
+                            text-align: center;
+                            line-height: 40px;
+                            border-bottom: 1px solid #ccc;
+                            border-top: 3px solid #fff;
+                            &.active{
+                                border-top: 3px solid #e1251b;
+                                width: 105px;
+                                line-height: 37px;
+                                text-align: center;
+                                line-height: 40px;
+                                border-bottom:none;
+                            }
+                        }
+                    }
+                    //下边
+                    .aslideContent{
+                        padding: 10px;
+                        div{
+                            display: none;
+                            &.active{
+                                display: block;
+                                ul{
+                                    &.goodslist1{
+                                        li{
+                                            width: 50%;
+                                            border-bottom:1px dashed #ededed;
+                                            line-height: 28px;
+                                            float: left;
+                                        }
+                                    }
+                                    &.goodslist2{
+                                        margin: 5px 0 15px;
+                                        li{
+                                            border-bottom:1px solid #ededed;
+                                            img{
+                                                width: 152px;
+                                            }
+                                            span{}
+                                            p{
+                                                font-size: 16px;
+                                                color:#c81623;
+                                            }
+                                            .button{
+                                                margin-top: 5px;
+                                                margin-bottom: 5px;
+                                                text-align: center;
+                                                
+                                                a{
+                                                    color:#8c8c8c;
+                                                    padding: 2px 14px;
+                                                    line-height: 18px;
+                                                    border:1px solid #8c8c8c;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //右侧的结构
+                .rightDetail{
+                    width: 980px;
+                    float: left;
+                    margin-left: 8px;
+                    //选择搭配开始
+                    .chooseBox{
+                        border:1px solid #ddd;
+                        margin-bottom: 15px;
+                        //标题
+                        h4{
+                            border-bottom:1px solid #ddd;
+                            background: #f1f1f1;
+                            color:#333;
+                            padding:5px 0 5px 15px;
+                        }
+                        //内容
+                        .listWrap{
+                            height: 170px;
+                            padding-top: 10px;
+                            //左边
+                            .left{
+                                width: 127px;
+                                height: 165px;
+                                position: relative;
+                                float: left;
+                                text-align: center;
+
+                                img{
+                                    width: 87px;
+                                    margin: 0 auto;
+                                }
+                                p{
+                                    color:#c81623;
+                                    font-size: 16px;
+                                }
+                                i{
+                                    position: absolute;
+                                    top:48px;
+                                    right:-25px;
+                                    font-size: 16px;
+                                }
+                            }
+                            //中间
+                            .middle{
+                                width: 668px;
+                                height: 165px;
+                                float: left;
+                                text-align: center;
+                                li{
+                                    width: 127px;
+                                    margin-left: 20px;
+                                    margin-right: 20px;
+                                    float: left;
+                                    img{
+                                        width: 120px;
+                                        height: 130px;
+                                    }
+                                    > span{}
+                                    div{
+                                        input{}
+                                        span{}
+                                    }
+                                }
+                            }
+                            //右侧
+                            .right{
+                                border-left:1px solid #ddd;
+                                float: left;
+                                width: 153px;
+                                height: 165px;
+                                padding-left: 20px;
+                                div{
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                }
+                                p{
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+                                }
+                                i{
+                                    color:#b1191a;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                }
+                                button{
+                                    padding: 10px 25px;
+                                    font-size: 16px;
+                                    color:#fff;
+                                    background: #e1251b;
+                                    border: none;
+                                }
+                            }
+
+                        }
+                    }
+
+                    //选项卡开始
+                    .BottomDetail{
+                        
+                        //菜单
+                        .tabBtns{
+                            background: #ededed;
+                            .clearfix();
+                            li{
+                                border-top:1px solid #ddd;
+                                border-bottom:1px solid #ddd;
+                                background: #fff;
+                                border-left:1px solid #ddd;
+                                height: 40px;
+                                padding-left: 11px;
+                                padding-right: 11px;
+                                float: left;
+                                text-align: center;
+                                line-height: 40px;
+                                &.active{
+                                    background: red;
+                                    a{
+                                        color:#fff;
+                                    }
+                                }
+                                &:last-child{
+                                    border-right:1px solid #ddd;
+                                }
+                            }
+                        }
+                        //内容
+                        .tabContents{
+                            div{
+                                padding-left: 20px;
+                                line-height: 25px;
+                                display: none;
+                                &.active{
+                                    margin: 10px 0;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //内容区域结束
+
+    //右侧侧边栏开始
+    .rightAside{
+        width: 300px;
+        height: 100%;
+        background: #7a6e6e;
+        transition: 0.5s;
+        position: fixed;
+        top:0px;
+        &.asideClose{
+            right:-294px;
+        }
+        &.asideOpen{
+            right:0px;
+        }
+        //按钮区域
+        .btns{
+            width: 35px;
+            height: 35px;
+            background: #7a6e6e;
+            border-radius: 5px 0 0 5px;
+            left:-29px;
+            background-size: 35px 35px;
+            position: absolute;
+            &.btnsClose{
+                background-image: url('../images/list.png');
+            }
+            &.btnsOpen{
+                background-image: url('../images/cross.png');
+            }
+        }
+
+        //侧边栏内容区域
+        .content{
+            width: 294px;
+            background: bisque;
+            position: absolute;
+            left:6px;
+            top:0px;
+            bottom:0px;
+            z-index: 50;
+        }
+        //侧边导航
+        .navlist{
+            position: absolute;
+            left:-29px;
+            top:50%;
+            transform: translateY(-50%);
+            li{
+                width: 35px;
+                height: 35px;
+                position: relative;
+                p{
+                    width: 35px;
+                    height: 35px;
+                    background: #7a6e6e;
+                    background-image: url('../images/toolbars.png');
+                    background-position: -87px -174px;
+                    transition: 0.5s;
+                }
+                i{
+                    width: 62px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 35px;
+                    position: absolute;
+                    left:35px;
+                    transition: 0.5s;
+                    top:0px;
+                    background: #7a6e6e;
+                }
+                &:hover{
+                    p{
+                        background-color: pink;
+                    }
+                    i{
+                        background-color: pink;
+                        left:-62px;
+                    }
+                }
+            }
+        }
+    }
+
+    //右侧侧边栏结束
+
+
+    
+}
