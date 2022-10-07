@@ -1,1 +1,1 @@
-#  这是一个R优选PC端项目，前端技术栈：HTML+CSS+JavaScript
+#  这是一个R优选PC端项目，前端技术栈：HTML + CSS + Less + JavaScript
