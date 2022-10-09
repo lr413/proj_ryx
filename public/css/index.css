@@ -77,7 +77,7 @@
   border: none;
 }
 #wrapper #header .headBottom .headBottomMain .search input::-webkit-input-placeholder {
-  color: yellowgreen;
+  color: skyblue;
 }
 #wrapper #navWrap {
   border-bottom: 2px solid #e1251b;
